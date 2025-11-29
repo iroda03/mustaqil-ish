@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iroda Gullari | Xush kelibsiz</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      height: 100%;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      overflow: hidden;
+      position: relative;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(-45deg, #9b59b6, #8e44ad, #be2edd, #a29bfe);
+      background-size: 200% 200%;
+      animation: bgAnimate 15s ease infinite;
+    }
+    @keyframes bgAnimate {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    .welcome {
+      text-align: center;
+      color: #fff;
+      animation: fadeInScale 2s ease-out forwards;
+      opacity: 0;
+      z-index: 1;
+    }
+    .welcome h1 {
+      font-size: 2.5rem;
+      line-height: 1.2;
+    }
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.8); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    .corner {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      z-index: 1;
+      border-color: #fff;
+    }
+    .top-left { top: 20px; left: 20px; border-top: 2px solid; border-left: 2px solid; }
+    .top-right { top: 20px; right: 20px; border-top: 2px solid; border-right: 2px solid; }
+    .bottom-left { bottom: 20px; left: 20px; border-bottom: 2px solid; border-left: 2px solid; }
+    .bottom-right { bottom: 20px; right: 20px; border-bottom: 2px solid; border-right: 2px solid; }
+    .btn-flowers {
+      position: fixed;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 1rem 2rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #fff;
+      background: transparent;
+      border: 2px solid #ff004f;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      z-index: 1;
+      transition: box-shadow 0.3s ease, color 0.3s ease;
+    }
+    .btn-flowers:hover {
+      color: #ff004f;
+      box-shadow: 0 0 10px #ff004f, 0 0 20px #ff004f, 0 0 30px #ff004f;
+      background: rgba(255, 0, 79, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="corner top-left"></div>
+  <div class="corner top-right"></div>
+  <div class="corner bottom-left"></div>
+  <div class="corner bottom-right"></div>
+  <div class="welcome">
+    <h1>Assalomu alaykum</h1>
+    <h1>"Iroda gullar do'koniga xush keldingiz"</h1>
+  </div>
+  <a href="gul.php" class="btn-flowers">Gullar bilan tanishing</a>
+</body>
+</html>
